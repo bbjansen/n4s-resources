@@ -11,7 +11,8 @@ export PATH=/opt/rocm/bin:$PATH
 export CC=/opt/rocm/bin/hipcc
 export CXX=/opt/rocm/bin/hipcc
 
-make LLAMA_HIPBLAS=1 -j$(nproc)
+cmake -B build -DLLAMA_HIPBLAS=ON
+cmake --build build -j$(nproc)
 
 echo "==> Creating model directory..."
 sudo mkdir -p /opt/llama-models
