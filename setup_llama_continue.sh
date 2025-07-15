@@ -19,9 +19,9 @@ sudo mkdir -p /opt/llama-models
 sudo chown $USER:$USER /opt/llama-models
 
 echo "==> Installing node_exporter (optional)..."
-wget https://github.com/prometheus/node_exporter/releases/latest/download/node_exporter-1.8.1.linux-amd64.tar.gz
-tar -xvf node_exporter-*.tar.gz
-sudo mv node_exporter-*/node_exporter /usr/local/bin/
+wget https://github.com/prometheus/node_exporter/releases/download/v1.9.1/node_exporter-1.9.1.linux-amd64.tar.gz
+tar -xvf node_exporter-1.9.1.linux-amd64.tar.gz
+sudo mv node_exporter-1.9.1.linux-amd64/node_exporter /usr/local/
 nohup node_exporter &
 
 echo "==> Done. Please place your .gguf models in /opt/llama-models"
