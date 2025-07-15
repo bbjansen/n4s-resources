@@ -1,0 +1,10 @@
+[Unit]
+Description=LLaMA Model Workers
+After=network.target
+
+[Service]
+ExecStart=/home/YOUR_USERNAME/launch_llama_workers.sh
+Restart=always
+
+[Install]
+WantedBy=default.target
